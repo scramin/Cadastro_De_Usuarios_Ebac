@@ -128,11 +128,12 @@ int main()
         setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
     
         printf("############################################## CADASTRO DE USUARIOS EBAC ##############################################\n\n");
-        
+		      
 		printf("Escolha uma das opções:\n\n"); //inicio do menu
         printf("1- Cadastro de usuários\n");
         printf("2- Consulta de usuários\n");
-        printf("3- Deletar usuários\n\n");    
+        printf("3- Deletar usuários\n\n");
+        printf("4- Sair do sistema\n\n");
         printf("Opção: "); //fim do menu
     
         scanf("%d", &opcao); //armazenamento da escolha do usuário
@@ -151,7 +152,12 @@ int main()
             
             case 3:
             deletar(); //chamada de funções
-            break;   
+            break; 
+			
+			case 4:
+            printf("Obrigado por usar o sistema!\n");
+            return 0; //finalização do sistema
+            break; 
 			
             default:
             printf("Esta opção não está disponível!\n");
